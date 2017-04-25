@@ -3,10 +3,12 @@ function factor(num) {
   const factors = [2, 3, 5, 7];
 
   for(var i = 0; i < factors.length; i++) {
-    if (num % factors[i] === 0) {
+    if (num % factors[i] === 0) { //if the number is divisible by any arbitrary number in the array
+      // okay but what if the number is a factor?
       result.push(factors[i]);
       num /= factors[i];
-    } else {
+    } else if (/*???*/) {
+      // should push the number into the array once all the factors are out
       result.push(num);
     }
   }
