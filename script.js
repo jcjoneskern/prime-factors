@@ -11,10 +11,10 @@ function factor(num) {
       result.push(factors[i]);
       num /= factors[i];
     } else {
-      i++;
+      result.push(num);
+      break;
     }
   }
-
 
   return result;
 }
