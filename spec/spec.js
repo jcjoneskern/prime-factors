@@ -44,6 +44,10 @@ describe("factor-er", function() {
   it("factors 169", function() {
     expect(factor(169)).toEqual([13,13]);
   });
+  //cubes of primes
+  it("factors 2197", function() {
+    expect(factor(2197)).toEqual([13,13,13]);
+  });
   //absurdly large numbers
   it("factors 840", function() {
     expect(factor(840)).toEqual([2,2,2,5,3,7].sort());
