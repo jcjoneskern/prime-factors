@@ -22,7 +22,4 @@ describe("factor-er", function() {
   it("factors 19", function() {
     expect(factor(19)).toEqual([19]);
   });
-  it("factors 19", function() {
-    expect(factor(19)).toEqual([19]);
-  });
 });
