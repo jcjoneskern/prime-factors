@@ -25,8 +25,11 @@ function factor(num) {
     } else if (num % factors[i] === 0) {
       result.push(factors[i]);
       num /= factors[i];
-    } else if (i < factors.length) {
+    } else if (factors[i] < 7) {
       i++;
+    } else if ((Math.sqrt(num)) % 1 !== 0) {
+      result.push(Math.sqrt(num));
+      num = Math.sqrt(num);
     } else {
       result.push(num);
       break;
