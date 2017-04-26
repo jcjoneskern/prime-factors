@@ -1,9 +1,13 @@
 var factor = require("../script");
 
 describe("factor-er", function() {
-  // it("factors 1", function() {
-  //   expect(factor(1)).toEqual([1]);
-  // });
+  // weird exceptions
+  it("factors 0", function() {
+    expect(factor(0)).toEqual(["n/a"]);
+  });
+  it("factors 1", function() {
+    expect(factor(1)).toEqual(["n/a"]);
+  });
   //single digit primes
   it("factors 2", function() {
     expect(factor(2)).toEqual([2]);
@@ -53,9 +57,9 @@ describe("factor-er", function() {
   });
   //absurdly large numbers
   it("factors 840", function() {
-    expect(factor(840)).toEqual([2,2,2,5,3,7].sort());
+    expect(factor(840)).toEqual([2,2,2,3,5,7]);
   });
   it("factors 7452900", function() {
-    expect(factor(7452900)).toEqual([2,2,3,3,5,5,7,7,13,13].sort(function(a, b){return a-b}));
+    expect(factor(7452900)).toEqual([2,2,3,3,5,5,7,7,13,13]);
   });
 });
