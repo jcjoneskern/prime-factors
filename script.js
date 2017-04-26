@@ -21,6 +21,8 @@ function factor(num) {
     }
   }
 
+  // thinking that the first 3 conditions could be done better to check if something is prime
+
   return result;
 }
 
