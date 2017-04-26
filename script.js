@@ -1,7 +1,7 @@
 function factor(num) {
   let result = [];
   const factors = [2, 3, 5, 7];
-  // let i = 0;
+  let i = 2;
 
   // while (i < factors.length) {
   //   if (num === factors[i]) {
@@ -25,16 +25,29 @@ function factor(num) {
 
   // better strategy: check if prime; if yes, loop to find factors, else, return number as is
 
-  for(var i = 2; i < num; i++) {
-    if (num % i === 0) {
-      num /= i;
+  // for(var i = 2; i <= num; i++) {
+  //   if ((num % i) === 0) {
+  //     result.push(i);
+  //     num /= i;
+  //     i = 2;
+  //   } else {
+  //     result.push(num);
+  //     break;
+  //   }
+  // }
+
+
+  while (i <= num) {
+    if ((num % i) === 0) {
       result.push(i);
+      num /= i;
     } else {
-      // is not prime, you're done
-      result.push(num);
-      break;
+      i++;
     }
   }
+
+  // feels like some kind of while loop is needed for anything that has the same factor several times but ???
+  // like, restart and keep running until you hit the else line
 
 
   return result;
