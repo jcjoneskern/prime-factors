@@ -19,6 +19,18 @@ describe("factor-er", function() {
   it("factors 10", function() {
     expect(factor(10)).toEqual([2,5]);
   });
+  it("factors 14", function() {
+    expect(factor(14)).toEqual([2,7]);
+  });
+  it("factors 15", function() {
+    expect(factor(15)).toEqual([3,5]);
+  });
+  it("factors 15", function() {
+    expect(factor(15)).toEqual([3,5]);
+  });
+  it("factors 57", function() {
+    expect(factor(57)).toEqual([3,19]);
+  });
   it("factors 19", function() {
     expect(factor(19)).toEqual([19]);
   });
